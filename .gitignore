@@ -1,0 +1,4 @@
+# ignore pycache files
+__pycache__
+
+db.sqlite3
