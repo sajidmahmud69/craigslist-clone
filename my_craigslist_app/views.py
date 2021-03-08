@@ -1,5 +1,6 @@
+import requests
 from django.shortcuts import render
-from django.http import HttpResponse
+from bs4 import BeautifulSoup
 
 # Create your views here.
 
@@ -8,5 +9,10 @@ def home (request):
 
 
 def new_search (request):
-    html = "<html><body>Amar BAL</body></html>"
-    return HttpResponse (html)
+    
+    search = request.POST.get ('search')
+    print (search)
+    stuff_for_frontend = {
+        'search': search,
+    }
+    return render (request, 'my_craigslist_app/new_search.html', stuff_for_frontend)

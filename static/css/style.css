@@ -1,10 +1,10 @@
 .card {
-    height: 400px;
+    height: 400px; /* Your height here */
     overflow: hidden;
 }
 
 .card-image {
-    height: 250px;
+    height: 250px; /* Your height here */
     overflow: hidden;
 }
 
@@ -19,9 +19,9 @@
     display: -webkit-flex;
     display: flex;
 
-    -webkit-box-flex: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
 }
-
 
 .flex-item {
     background: tomato;
@@ -33,4 +33,6 @@
     line-height: 150px;
     color: white;
     font-weight: bold;
+    font-size: 3em;
+    text-align: center;
 }
