@@ -6,3 +6,6 @@ db.sqlite3
 
 # ignore vscode gile
 .vscode
+
+# ignore .env file to store SECRET_KEY for django
+.env
