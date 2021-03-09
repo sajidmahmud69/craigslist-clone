@@ -3,49 +3,22 @@
     <h2 style = "text-align: center">{{ search | title }}</h2>
 
     <div class = "row">
-        <div class = "col s4">
-            <div class = "card large">
-                <div class = "card-image">
-                    <a href = "/"><img src = "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-rtx-3090-shop-630-d@2x.png" alt = ""></a>
+        {% for post in final_postings %}
+            <div class = "col s4">
+                <div class = "card large">
+                    <div class = "card-image">
+                        <a href = "{{ post.1 }}"><img src = "{{ post.3 }}" alt = ""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.0 }}</p>
+                    </div>
+                    <div class = "card-action">
+                        <a href = "{{ post.1 }}">View Listing:  Price {{ post.2 }}</a>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class = "card-action">
-                    <a href = "/">View Listing:  Price TEST PRICE</a>
-                </div>
-            </div>
-        </div>      
-
-        <div class = "col s4">
-            <div class = "card large">
-                <div class = "card-image">
-                    <a href = "/"><img src = "https://images-na.ssl-images-amazon.com/images/I/61-7uGhZfQL._AC_SL1024_.jpg" alt = ""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class = "card-action">
-                    <a href = "/">View Listing:  Price TEST PRICE</a>
-                </div>
-            </div>
-        </div>      
-
-
-        <div class = "col s4">
-            <div class = "card large">
-                <div class = "card-image">
-                    <a href = "/"><img src = "https://images-na.ssl-images-amazon.com/images/I/81-GWj0nEkL._AC_SL1500_.jpg" alt = ""></a>
-                </div>
-                <div class="card-content">
-                    <p>TEST</p>
-                </div>
-                <div class = "card-action">
-                    <a href = "/">View Listing:  Price TEST PRICE</a>
-                </div>
-            </div>
-        </div>      
+            </div>      
+        {% endfor %}
     </div>
-    
+
 {% endblock content %}
 
